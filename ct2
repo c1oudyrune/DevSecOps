@@ -1,0 +1,9 @@
+1.
+Start-Process "C:\Program Files\Docker\Docker\Docker Desktop.exe"
+2.
+docker start onlyoffice-documentserver
+3.
+docker ps
+4.
+docker rm -f onlyoffice-documentserver
+docker run -d -p 8080:80 -v onlyoffice_data:/var/www/onlyoffice/Data -v onlyoffice_logs:/var/log/onlyoffice -v onlyoffice_cache:/var/lib/onlyoffice/documentserver/App_Data/cache --name onlyoffice-documentserver onlyoffice/documentserver:latest
