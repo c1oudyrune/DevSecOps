@@ -1,0 +1,6 @@
+1.
+  wsl
+2.
+  cd ~/ansible_course
+  ansible-playbook -i hosts_local.yml 01_nginx.yml
+3. Все
