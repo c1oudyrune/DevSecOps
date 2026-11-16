@@ -1,0 +1,13 @@
+1.	Открываем PowerShell не в админе и входим в Убунту
+wsl -d Ubuntu
+2.	Вводим ноды
+export PATH="$HOME/bin:/usr/bin:/bin"
+kubectl get nodes            # 3 ноды Ready
+kubectl get pods -o wide      # 6 подов nginx Running
+kubectl get svc               # nginx-http, nginx-https
+3.	Выводим скрипты
+bash /mnt/c/Users/thezo/Documents/MultiTool/HomeChats/Chat-7/kind-status.sh   # узлы и сервисы
+bash /mnt/c/Users/thezo/Documents/MultiTool/HomeChats/Chat-7/kind-nginx.sh    # пересоздать deployment+сервисы
+bash /mnt/c/Users/thezo/Documents/MultiTool/HomeChats/Chat-7/kind-curl.sh     # проверка nginx через curl
+4.	Проверка доступа
+kubectl run curltest --image=curlimages/curl --rm -it --restart=Never -- curl -s http://10.96.75.98
