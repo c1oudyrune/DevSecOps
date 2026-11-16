@@ -14,5 +14,10 @@ docker ps
 docker rm -f onlyoffice-documentserver
 docker run -d -p 8080:80 -v onlyoffice_data:/var/www/onlyoffice/Data -v onlyoffice_logs:/var/log/onlyoffice -v onlyoffice_cache:/var/lib/onlyoffice/documentserver/App_Data/cache --name onlyoffice-documentserver onlyoffice/documentserver:latest
 <img width="833" height="190" alt="image" src="https://github.com/user-attachments/assets/e3947f3f-ce6b-4416-9b15-bfb3f4219d23" />
+Если что либо сломалось
+docker rm -f onlyoffice-documentserver
+docker run -d -p 8080:80 -v onlyoffice_data:/var/www/onlyoffice/Data -v onlyoffice_logs:/var/log/onlyoffice -v onlyoffice_cache:/var/lib/onlyoffice/documentserver/App_Data/cache --name onlyoffice-documentserver onlyoffice/documentserver:latest
+
 
 http://localhost:8080/welcome/
+<img width="1649" height="843" alt="image" src="https://github.com/user-attachments/assets/6e802717-4489-44f8-b457-5d685768f470" />
